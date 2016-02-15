@@ -16,11 +16,6 @@ class SequenceMeta(models.Model):
         verbose_name = _(u'SequenceMeta')
         verbose_name_plural = _(u'SequenceMetas')
 
-    def increment(self, commit=True):
-        self.value += 1
-        if commit:
-            self.save()
-
     def next_value(self, commit=True):
         self.value += 1
         if commit:
